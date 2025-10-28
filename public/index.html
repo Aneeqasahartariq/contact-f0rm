@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+    input, textarea { padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #007bff; color: white; padding: 0.8rem; border: none; border-radius: 5px; cursor: pointer; }
+    @media (max-width: 600px) { form { padding: 0.5rem; } }
+  </style>
+</head>
+<body>
+  <h2>Contact Me</h2>
+  <form action="/send-email" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
